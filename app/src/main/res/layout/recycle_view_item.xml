@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_subrayada"
             android:hint="@string/title_textview_hint"
             android:textColor="@color/md_black_1000" />
 

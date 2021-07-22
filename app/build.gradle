@@ -74,10 +74,14 @@ dependencies {
     implementation 'io.github.manneohlund:smart-recycler-adapter-stickyheader:1.0.0-alpha02'
     // ViewEvent click listeners, multi select, swipe dismiss and drag & drop
     implementation 'io.github.manneohlund:smart-recycler-adapter-viewevent:1.0.0-beta03'
+    // Filter extension library
+    implementation 'io.github.manneohlund:smart-recycler-adapter-filter:1.0.0-alpha01'
 
 
     //TextDrawable
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+
 
     // Testing
     testImplementation "junit:junit:$rootProject.junitVersion"

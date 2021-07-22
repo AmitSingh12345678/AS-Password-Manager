@@ -1,9 +1,8 @@
-package com.example.aspasswordmanager.ui.home
+package com.example.aspasswordmanager.ui.home.viewholder
 
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.aspasswordmanager.R
-import org.w3c.dom.Text
 import smartadapter.viewholder.SmartViewHolder
 
 class HeaderViewHolder<T: Any>(parentView: ViewGroup): SmartViewHolder<T>

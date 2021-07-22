@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.aspasswordmanager.ui.home.HomeFragment"
+        android:name="com.example.aspasswordmanager.ui.home.ui.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
@@ -15,7 +15,7 @@
         android:id="@+id/navigation_password_generator"
         android:name="com.example.aspasswordmanager.ui.password_generator.PasswordGeneratorFragment"
         android:label="@string/title_password_generator"
-        tools:layout="@layout/fragment_password_manager" />
+        tools:layout="@layout/fragment_password_generator" />
 
     <fragment
         android:id="@+id/navigation_settings"

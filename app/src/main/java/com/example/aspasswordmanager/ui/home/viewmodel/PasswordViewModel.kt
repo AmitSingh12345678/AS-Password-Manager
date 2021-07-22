@@ -1,4 +1,4 @@
-package com.example.aspasswordmanager.ui.home
+package com.example.aspasswordmanager.ui.home.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.*
@@ -24,6 +24,10 @@ class PasswordViewModel(context: Context) : ViewModel() {
     //   the UI when the data actually changes.
     // - Repository is completely separated from the UI through the ViewModel.
     val allWords: LiveData<List<PasswordEntity>> = repository.allWords
+
+    fun searchPasswords(searchQuery: String): LiveData<List<PasswordEntity>>{
+        return repository.searchPasswords(searchQuery)
+    }
 
     /**
      * Launching a new coroutine to insert the data in a non-blocking way

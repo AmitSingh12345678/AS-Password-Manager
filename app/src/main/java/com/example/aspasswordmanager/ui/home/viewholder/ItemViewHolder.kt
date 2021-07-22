@@ -1,4 +1,4 @@
-package com.example.aspasswordmanager.ui.home
+package com.example.aspasswordmanager.ui.home.viewholder
 
 import android.graphics.Color
 import android.view.ViewGroup

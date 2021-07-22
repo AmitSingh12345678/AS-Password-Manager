@@ -1,8 +1,10 @@
-package com.example.aspasswordmanager.ui.home
+package com.example.aspasswordmanager.ui.home.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.aspasswordmanager.R
 import com.example.aspasswordmanager.ui.home.database.PasswordEntity
@@ -19,12 +21,17 @@ class ShowItemActivity : AppCompatActivity() {
         val password: TextView =findViewById(R.id.password)
         val website: TextView =findViewById(R.id.website)
         val note: TextView =findViewById(R.id.note)
+        val back_btn:ImageButton=findViewById(R.id.back_btn)
 
         title.text=item.title
         username.text=item.username
         password.text=item.password
         website.text=item.password
         note.text=item.note
+
+        back_btn.setOnClickListener(View.OnClickListener {
+            finish()
+        })
 
     }
 }

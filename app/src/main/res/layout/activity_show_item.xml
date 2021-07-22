@@ -1,37 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/title"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/title_textview_hint"
-        style="@style/item_text_view" />
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/username"
+        >
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_buton"
+            android:layout_alignParentStart="true"
+            android:layout_margin="@dimen/spacing_normal"
+            android:padding="@dimen/spacing_normal"
+            />
+
+    </RelativeLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/item_text_view_username"
-        style="@style/item_text_view"/>
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/item_text_view_password"
-        style="@style/item_text_view"/>
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/website"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/item_text_view_website"
-        style="@style/item_text_view"/>
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/note"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/item_text_view_notes"
-        style="@style/item_text_view"/>
+        android:layout_margin="@dimen/spacing_normal"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title_textview_hint"
+
+            android:background="@drawable/serach_view_bg"
+            style="@style/item_text_view" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_text_view_username"
+            android:background="@drawable/serach_view_bg"
+            style="@style/item_text_view"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/serach_view_bg"
+            android:hint="@string/item_text_view_password"
+            style="@style/item_text_view"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/serach_view_bg"
+            android:hint="@string/item_text_view_website"
+            style="@style/item_text_view"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/serach_view_bg"
+            android:hint="@string/item_text_view_notes"
+            style="@style/item_text_view"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
