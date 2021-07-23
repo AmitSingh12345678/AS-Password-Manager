@@ -30,7 +30,7 @@ class PasswordGeneratorViewModel : ViewModel() {
         return list
     }
 
-    var passwordLength: MutableLiveData<Int> = MutableLiveData(8)
+    var passwordLength: MutableLiveData<Int> = MutableLiveData(4)
 
     // TODO: 22-07-2021  change it's intialization 
     var password: MutableLiveData<String> = MutableLiveData(null)

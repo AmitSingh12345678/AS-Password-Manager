@@ -22,6 +22,7 @@ class ShowItemActivity : AppCompatActivity() {
         val website: TextView =findViewById(R.id.website)
         val note: TextView =findViewById(R.id.note)
         val back_btn:ImageButton=findViewById(R.id.back_btn)
+        val edit_btn:ImageButton=findViewById(R.id.edit_btn)
 
         title.text=item.title
         username.text=item.username
@@ -29,9 +30,16 @@ class ShowItemActivity : AppCompatActivity() {
         website.text=item.password
         note.text=item.note
 
-        back_btn.setOnClickListener(View.OnClickListener {
+        back_btn.setOnClickListener {
             finish()
-        })
+        }
+        edit_btn.setOnClickListener {
+            val intent = Intent(this, AddItemActivity::class.java)
+            intent.putExtra("ITEM_INFO", item)
+            intent.putExtra("MSG","FOR_EDIT")
+            startActivity(intent)
+            finish()
+        }
 
     }
 }

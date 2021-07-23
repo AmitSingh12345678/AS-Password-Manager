@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ASPasswordManager">
         <activity android:name=".ui.home.ui.ShowItemActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/UI_Activity"/>
         <activity android:name=".ui.home.ui.AddItemActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+            android:theme="@style/UI_Activity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

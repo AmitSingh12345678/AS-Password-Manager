@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,55 +13,127 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_buton"
+            android:background="@drawable/button_background"
             android:layout_alignParentStart="true"
             android:layout_margin="@dimen/spacing_normal"
             android:padding="@dimen/spacing_normal"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/primary"
+            android:elevation="4dp"
+            android:tint="#FFFFFF"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+
+            android:src="@drawable/baseline_edit_note_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/spacing_normal"
+            android:padding="@dimen/spacing_normal"
+            android:adjustViewBounds="true"
+            android:backgroundTint="@color/primary"
+            android:elevation="4dp"
+            android:tint="#FFFFFF"
             />
 
     </RelativeLayout>
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_normal"
-        android:orientation="vertical">
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/title"
+        android:layout_margin="@dimen/spacing_normal">
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/title_textview_hint"
 
-            android:background="@drawable/serach_view_bg"
-            style="@style/item_text_view" />
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/item_text_view_username"
-            android:background="@drawable/serach_view_bg"
-            style="@style/item_text_view"/>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/serach_view_bg"
-            android:hint="@string/item_text_view_password"
-            style="@style/item_text_view"/>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/website"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/serach_view_bg"
-            android:hint="@string/item_text_view_website"
-            style="@style/item_text_view"/>
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/note"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/serach_view_bg"
-            android:hint="@string/item_text_view_notes"
-            style="@style/item_text_view"/>
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                style="@style/fieldNames" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                style="@style/showActivityEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_background"
+                android:drawableStart="@drawable/outline_title_24"
+                android:drawablePadding="@dimen/spacing_small"
+                android:hint="@string/title_textview_hint" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                style="@style/fieldNames" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/username"
+                style="@style/showActivityEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_background"
+                android:drawableStart="@drawable/outline_perm_identity_24"
+                android:drawablePadding="@dimen/spacing_small"
+                android:hint="@string/item_text_view_username" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                style="@style/fieldNames" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/primary"
+                android:background="@android:color/transparent"
+                app:hintEnabled="false"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintAnimationEnabled="false"
+                >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                style="@style/showActivityEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_background"
+                android:drawableStart="@drawable/outline_password_24"
+                android:drawablePadding="@dimen/spacing_small"
+                android:hint="@string/item_text_view_password"
+                android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Website"
+                style="@style/fieldNames" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/website"
+                style="@style/showActivityEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_background"
+                android:drawableStart="@drawable/outline_language_24"
+                android:drawablePadding="@dimen/spacing_small"
+                android:hint="@string/item_text_view_website" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes"
+                style="@style/fieldNames" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/note"
+                style="@style/showActivityEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_view_background"
+                android:drawableStart="@drawable/outline_notes_24"
+                android:drawablePadding="@dimen/spacing_small"
+                android:hint="@string/item_text_view_notes" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

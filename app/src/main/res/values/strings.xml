@@ -7,7 +7,7 @@
     <string name="item_text_view_username">Username</string>
     <string name="item_text_view_password">Password</string>
     <string name="item_text_view_website">Website</string>
-    <string name="item_text_view_notes">notes</string>
+    <string name="item_text_view_notes">Notes</string>
     <string name="floating_button_info">for adding a new item</string>
     <string name="hint_title">Enter title</string>
     <string name="search_item_title">Search</string>

@@ -96,7 +96,10 @@ class HomeFragment : Fragment() {
 
         addBtn.setOnClickListener(listener)
         passwordViewModel.allWords.observe(viewLifecycleOwner, {
-            Log.i(TAG, "onViewCreated: Observer called with data: $it")
+            Log.i(TAG, "onViewCreated: Observer called with data: ")
+            for (i in it) {
+                Log.i(TAG, "onViewCreated with item id: ${i.id}")
+            }
             items = getModifiedList(it)
 
             adapter.setItems(items)
@@ -105,9 +108,10 @@ class HomeFragment : Fragment() {
         adapter.add(OnClickEventListener {
             if (it.viewHolder is ItemViewHolder) {
                 val item: PasswordEntity = (it.viewHolder as ItemViewHolder).item
-                Log.d(TAG, "onViewCreated: $item")
+                Log.d(TAG, "onViewCreated : $item")
                 val intent = Intent(context, ShowItemActivity::class.java)
                 intent.putExtra("ITEM_INFO", item)
+
                 startActivity(intent)
             }
         })
@@ -214,6 +218,7 @@ class HomeFragment : Fragment() {
         when(view.id){
             R.id.add -> {
                 val intent: Intent = Intent(context, AddItemActivity::class.java)
+                intent.putExtra("MSG","FOR_SHOW")
                 startActivity(intent)
             }
 

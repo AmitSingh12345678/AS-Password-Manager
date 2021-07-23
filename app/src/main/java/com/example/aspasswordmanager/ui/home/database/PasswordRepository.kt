@@ -1,6 +1,7 @@
 package com.example.aspasswordmanager.ui.home.database
 
 import android.app.DownloadManager
+import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 // Declares the DAO as a private property in the constructor. Pass in the DAO
 // instead of the whole database, because you only need access to the DAO
 class PasswordRepository(private val passwordDao: PasswordDao) {
-
+    private  val TAG = "PasswordRepository"
     // Room executes all queries on a separate thread.
     // Observed Flow will notify the observer when the data has changed.
     val allWords: LiveData<List<PasswordEntity>> = passwordDao.getAllPasswords()
@@ -34,6 +35,7 @@ class PasswordRepository(private val passwordDao: PasswordDao) {
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun update(passwordEntity: PasswordEntity) {
+        Log.d(TAG, "update: function called with item: $passwordEntity and ${passwordEntity.id}")
         passwordDao.update(passwordEntity)
     }
 }
