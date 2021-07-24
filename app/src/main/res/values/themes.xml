@@ -13,7 +13,11 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
+        // enable window content transition
+        <item name="android:windowContentTransitions">true</item>
+
     </style>
+// for show and item activity
     <style name="UI_Activity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
@@ -29,25 +33,27 @@
 
     </style>
 
-     <style name="item_text_view">
-      <item name="android:textSize">18sp</item>
-      <item name="android:layout_margin">4dp</item>
-         <item name="fontFamily">sans-serif</item>
-      <item name="android:padding">10dp</item>
+    <style name="item_text_view">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">10dp</item>
 
-  </style>
+    </style>
 
     <style name="showActivityEdittext">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:layout_margin">10dp</item>
         <item name="fontFamily">sans-serif</item>
         <item name="android:padding">14dp</item>
-        <item  name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
     </style>
+
     <style name="fieldNames">
         <item name="android:textSize">20sp</item>
         <item name="android:layout_marginStart">4dp</item>
-        <item  name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/black</item>
         <item name="fontFamily">sans-serif-light</item>
     </style>
 

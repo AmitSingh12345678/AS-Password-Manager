@@ -1,10 +1,13 @@
 package com.example.aspasswordmanager.ui.home.ui
 
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import com.example.aspasswordmanager.R
 import com.example.aspasswordmanager.ui.home.database.PasswordEntity
@@ -24,6 +27,8 @@ class AddItemActivity : AppCompatActivity() {
         val website: EditText = findViewById(R.id.website)
         val note: EditText = findViewById(R.id.note)
         val back_btn: ImageButton = findViewById(R.id.back_btn)
+
+        password.setTypeface(Typeface.MONOSPACE)
 
         var originalItem: PasswordEntity?=null
         if(intent.getSerializableExtra("ITEM_INFO")!=null) {
@@ -48,20 +53,24 @@ class AddItemActivity : AppCompatActivity() {
                 ViewModelProvider(this, PasswordViewModelFactory(this)).get(PasswordViewModel::class.java)
 
         save_btn.setOnClickListener(View.OnClickListener {
-            val title_txt: String = title.text.toString()
-            val password_txt: String = password.text.toString()
-            val username_txt: String = username.text.toString()
-            val website_txt: String = website.text.toString()
-            val note_txt: String = note.text.toString()
+            val title_txt: String = title.text.toString().trim()
+            val password_txt: String = password.text.toString().trim()
+            val username_txt: String = username.text.toString().trim()
+            val website_txt: String = website.text.toString().trim()
+            val note_txt: String = note.text.toString().trim()
 
-            val item: PasswordEntity = PasswordEntity(title_txt, username_txt, password_txt, website_txt, note_txt)
-           if(originalItem!=null)  item.id=originalItem.id
-            if(msg.equals("FOR_EDIT")){
-                viewModel.update(item)
+            if(TextUtils.isEmpty(title_txt)){
+                title.setError("This Field can't be empty.")
             }else {
-                viewModel.insert(item)
+                val item: PasswordEntity = PasswordEntity(title_txt, username_txt, password_txt, website_txt, note_txt)
+                if (originalItem != null) item.id = originalItem.id
+                if (msg.equals("FOR_EDIT")) {
+                    viewModel.update(item)
+                } else {
+                    viewModel.insert(item)
+                }
+                finish()
             }
-            finish()
         })
 
     }

@@ -78,6 +78,9 @@ dependencies {
     // Filter extension library
     implementation 'io.github.manneohlund:smart-recycler-adapter-filter:1.0.0-alpha01'
 
+    // Lottie Animation
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
 
     //TextDrawable
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'

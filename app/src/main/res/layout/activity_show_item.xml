@@ -15,23 +15,37 @@
             android:src="@drawable/back_buton"
             android:background="@drawable/button_background"
             android:layout_alignParentStart="true"
+            android:padding="@dimen/spacing_small"
             android:layout_margin="@dimen/spacing_normal"
-            android:padding="@dimen/spacing_normal"
             android:adjustViewBounds="true"
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
             android:tint="#FFFFFF"
             />
+
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/edit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_normal"
+            android:layout_toStartOf="@+id/delete_btn"
+            android:adjustViewBounds="true"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/primary"
+            android:elevation="4dp"
+            android:padding="@dimen/spacing_small"
+            android:src="@drawable/baseline_edit_note_black_24dp"
+            android:tint="#FFFFFF" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/button_background"
 
-            android:src="@drawable/baseline_edit_note_black_24dp"
+            android:src="@drawable/outline_delete_24"
             android:layout_alignParentEnd="true"
+            android:padding="@dimen/spacing_small"
             android:layout_margin="@dimen/spacing_normal"
-            android:padding="@dimen/spacing_normal"
             android:adjustViewBounds="true"
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
@@ -48,19 +62,29 @@
             android:layout_height="wrap_content"
 
             android:orientation="vertical">
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Title"
-                style="@style/fieldNames" />
+           <ImageView
+               android:id="@+id/avatar_image"
+               android:layout_width="120dp"
+               android:layout_height="120dp"
+               android:transitionName="avatar_transition_name"
+               android:layout_gravity="center"/>
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/title"
-                style="@style/showActivityEdittext"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/text_view_background"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:layout_gravity="center"
+                android:transitionName="title_transition_name"
                 android:drawableStart="@drawable/outline_title_24"
                 android:drawablePadding="@dimen/spacing_small"
+                android:padding="14dp"
+                android:background="@drawable/text_view_background"
                 android:hint="@string/title_textview_hint" />
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -92,15 +116,18 @@
                 app:boxStrokeWidthFocused="0dp"
                 app:hintAnimationEnabled="false"
                 >
-            <com.google.android.material.textfield.TextInputEditText
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+
                 android:id="@+id/password"
                 style="@style/showActivityEdittext"
+                android:focusable="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_view_background"
                 android:drawableStart="@drawable/outline_password_24"
                 android:drawablePadding="@dimen/spacing_small"
                 android:hint="@string/item_text_view_password"
+                android:fontFamily="serif-monospace"
                 android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
             <androidx.appcompat.widget.AppCompatTextView

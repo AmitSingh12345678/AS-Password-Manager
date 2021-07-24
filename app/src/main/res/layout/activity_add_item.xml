@@ -16,16 +16,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:background="@drawable/button_background"
-
-            android:layout_marginStart="@dimen/spacing_normal"
-            android:layout_marginTop="@dimen/spacing_normal"
-            android:layout_marginEnd="@dimen/spacing_normal"
-            android:layout_marginBottom="@dimen/spacing_normal"
+            android:padding="@dimen/spacing_small"
+            android:layout_margin="@dimen/spacing_normal"
             android:adjustViewBounds="true"
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
 
-            android:padding="@dimen/spacing_normal"
+
             android:src="@drawable/back_buton"
             android:tint="#FFFFFF" />
 
@@ -35,15 +32,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:background="@drawable/button_background"
-            android:layout_marginStart="@dimen/spacing_normal"
-            android:layout_marginTop="@dimen/spacing_normal"
-            android:layout_marginEnd="@dimen/spacing_normal"
-            android:layout_marginBottom="@dimen/spacing_normal"
+            android:padding="@dimen/spacing_small"
+            android:layout_margin="@dimen/spacing_normal"
             android:adjustViewBounds="true"
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
             android:tint="#FFFFFF"
-            android:padding="@dimen/spacing_normal"
             android:src="@drawable/check_button"
              />
 
@@ -57,12 +51,25 @@
         android:layout_height="wrap_content"
 
         android:orientation="vertical">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
+            android:layout_gravity="top"
             style="@style/fieldNames" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/md_red_500"
+            style="@style/fieldNames" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/title"
             style="@style/showActivityEdittext"
@@ -72,6 +79,7 @@
             android:drawableStart="@drawable/outline_title_24"
             android:drawablePadding="@dimen/spacing_small"
             android:hint="@string/title_textview_hint" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

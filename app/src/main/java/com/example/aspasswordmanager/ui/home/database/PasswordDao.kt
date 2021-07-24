@@ -17,7 +17,7 @@ interface PasswordDao {
 
 
     // Room automatically run those fun on bg threads, who are returning an flow or Livedata
-    @Query(" SELECT * from  password_table ORDER BY title ASC;")
+    @Query(" SELECT * from  password_table ORDER BY title COLLATE NOCASE ASC;")
     fun getAllPasswords(): LiveData<List<PasswordEntity>>
 
     @Query(" SELECT * from  password_table WHERE title LIKE '%' || :searchQuery || '%';")

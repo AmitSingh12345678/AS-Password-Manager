@@ -8,6 +8,10 @@
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_tiny"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
         android:textSize="@dimen/font_normal"
+        android:textColor="@color/md_blue_700"
         tools:text="A"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
