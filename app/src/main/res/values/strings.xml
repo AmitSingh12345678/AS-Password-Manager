@@ -13,6 +13,6 @@
     <string name="search_item_title">Search</string>
     <string name="alert_dialog_delete_message">This item will be permanently deleted.</string>
     <string name="alert_dialog_delete_title">Delete Item?</string>
-    <string name="info_for_adding_item">Click here to add item</string>
+    <string name="info_for_adding_item">Click here to add an item</string>
 
 </resources>
