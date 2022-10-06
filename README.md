@@ -1,6 +1,6 @@
 # AS-Password-Manager
 
-**AS-Password Manager** helps the user to store their all password securely at one place. So, user don't have to remember their passwords anymore. Passwords are secured by **AES Ecryption**, so no one can access it except the user.
+**AS-Password Manager** helps the user to store their all password securely at one place. So, user don't have to remember their passwords anymore. Passwords are secured by **Ecryption**, so no one can access it except the user.
 
 User can also generate secure passwords using password generator of **AS-Password Manager**.
 
