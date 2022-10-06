@@ -21,7 +21,7 @@
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
             android:tint="#FFFFFF"
-            />
+           />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/edit_btn"
@@ -35,7 +35,7 @@
             android:elevation="4dp"
             android:padding="@dimen/spacing_small"
             android:src="@drawable/baseline_edit_note_black_24dp"
-            android:tint="#FFFFFF" />
+            android:tint="#FFFFFF"/>
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/delete_btn"
             android:layout_width="wrap_content"
@@ -50,6 +50,7 @@
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
             android:tint="#FFFFFF"
+
             />
 
     </RelativeLayout>

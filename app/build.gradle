@@ -40,7 +40,8 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
     implementation "androidx.activity:activity-ktx:$rootProject.activityVersion"
-
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation 'com.google.android.material:material:1.4.0'
 
 
     // Lifecycle components
@@ -59,6 +60,7 @@ dependencies {
 
     // Room components
     implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    implementation 'androidx.cardview:cardview:1.0.0'
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
 
@@ -77,6 +79,8 @@ dependencies {
     implementation 'io.github.manneohlund:smart-recycler-adapter-viewevent:1.0.0-beta03'
     // Filter extension library
     implementation 'io.github.manneohlund:smart-recycler-adapter-filter:1.0.0-alpha01'
+    // DiffUtil extension library
+    implementation 'io.github.manneohlund:smart-recycler-adapter-diffutil:1.0.0-beta01'
 
     // Lottie Animation
     implementation "com.airbnb.android:lottie:$lottieVersion"
@@ -86,11 +90,10 @@ dependencies {
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
 
-
     // Testing
     testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
-    androidTestImplementation ("androidx.test.espresso:espresso-core:$rootProject.espressoVersion", {
+    androidTestImplementation("androidx.test.espresso:espresso-core:$rootProject.espressoVersion", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"

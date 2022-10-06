@@ -21,10 +21,9 @@
             android:adjustViewBounds="true"
             android:backgroundTint="@color/primary"
             android:elevation="4dp"
-
-
             android:src="@drawable/back_buton"
-            android:tint="#FFFFFF" />
+            android:tint="#FFFFFF"
+/>
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/save_btn"
@@ -39,7 +38,8 @@
             android:elevation="4dp"
             android:tint="#FFFFFF"
             android:src="@drawable/check_button"
-             />
+
+              />
 
     </RelativeLayout>
 <androidx.core.widget.NestedScrollView
@@ -78,7 +78,10 @@
             android:background="@drawable/text_view_background"
             android:drawableStart="@drawable/outline_title_24"
             android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/title_textview_hint" />
+            android:hint="@string/title_textview_hint"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -93,7 +96,10 @@
             android:background="@drawable/text_view_background"
             android:drawableStart="@drawable/outline_perm_identity_24"
             android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/item_text_view_username" />
+            android:hint="@string/item_text_view_username"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,7 +125,9 @@
                 android:drawableStart="@drawable/outline_password_24"
                 android:drawablePadding="@dimen/spacing_small"
                 android:hint="@string/item_text_view_password"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:imeOptions="actionNext"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -135,7 +143,10 @@
             android:background="@drawable/text_view_background"
             android:drawableStart="@drawable/outline_language_24"
             android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/item_text_view_website" />
+            android:hint="@string/item_text_view_website"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            />
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -149,7 +160,9 @@
             android:background="@drawable/text_view_background"
             android:drawableStart="@drawable/outline_notes_24"
             android:drawablePadding="@dimen/spacing_small"
-            android:hint="@string/item_text_view_notes" />
+            android:hint="@string/item_text_view_notes"
+            />
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>

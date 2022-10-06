@@ -14,5 +14,14 @@
     <string name="alert_dialog_delete_message">This item will be permanently deleted.</string>
     <string name="alert_dialog_delete_title">Delete Item?</string>
     <string name="info_for_adding_item">Click here to add an item</string>
+    <string name="tv_dark_mode">Dark Mode</string>
+    <string name="register">Register</string>
+    <string name="info_msg_for_setting_password">You need to create Master Password before starting using this app. You can only access this app using Master Password. You can change it later by going to Settings/Change Master Password.</string>
+    <string name="password">Password</string>
+    <string name="create_master_password">Create Master Password:</string>
+    <string name="login">Login</string>
+    <string name="tv_change_password">Change Master Password</string>
+    <string name="share_feedback">Share Feedback</string>
+
 
 </resources>

@@ -16,6 +16,7 @@
         // enable window content transition
         <item name="android:windowContentTransitions">true</item>
 
+
     </style>
 // for show and item activity
     <style name="UI_Activity" parent="Theme.MaterialComponents.DayNight.NoActionBar">

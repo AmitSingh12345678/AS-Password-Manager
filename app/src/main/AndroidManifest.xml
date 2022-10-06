@@ -4,24 +4,35 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_as_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_as_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ASPasswordManager">
-        <activity android:name=".ui.home.ui.ShowItemActivity"
-            android:theme="@style/UI_Activity"/>
-        <activity android:name=".ui.home.ui.AddItemActivity"
+        <activity android:name=".ui.settings.AboutUsActivity"
             android:theme="@style/UI_Activity"/>
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:name=".ui.settings.ChangePasswordActivity"
+            android:theme="@style/UI_Activity" />
+        <activity android:name=".ui.lock_screen.LoginActivity" />
+        <activity
+            android:name=".ui.lock_screen.RegisterActivity"
+            android:label="AS Password Manager" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.home.ui.ShowItemActivity"
+            android:theme="@style/UI_Activity" />
+        <activity
+            android:name=".ui.home.ui.AddItemActivity"
+            android:theme="@style/UI_Activity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
 
         </activity>
 
